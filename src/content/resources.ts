@@ -57,6 +57,15 @@ export const resources: Resource[] = [
     tags: ["mckinsey", "advanced", "intelligence"],
   },
   {
+    id: "support-faq",
+    title: "Support & FAQ (Rewiring the Firm)",
+    description:
+      "Official help center — troubleshooting, FAQs, and support contacts for Cursor at McKinsey.",
+    url: "https://rewiring-the-firm.apps.mckinsey.com/#tab=help",
+    category: "Skills",
+    tags: ["support", "faq", "help"],
+  },
+  {
     id: "slack-help",
     title: "#agentic-workflows-for-integratives on Slack",
     description: "Ask questions, browse threads, and see what others are working on.",
