@@ -8,7 +8,7 @@ export type TutorialStep = {
 };
 
 export type Tutorial = {
-  slug: "install" | "basics" | "pptx" | "excel";
+  slug: "install" | "deep-dive" | "basics" | "pptx" | "excel";
   number: string;
   title: string;
   subtitle: string;
