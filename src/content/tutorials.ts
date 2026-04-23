@@ -158,6 +158,25 @@ export const tutorials: Tutorial[] = [
         body: "In the terminal, run: `pip install openpyxl pandas`. openpyxl writes Excel files; pandas helps with data. Both install in seconds.",
       },
       {
+        id: "excel-1b",
+        title: "Download the Excel best practices file",
+        body: "Download this file and save it into your project folder. You'll point Cursor at it in a moment so every model it builds follows McKinsey conventions for structure, formulas, and formatting.",
+        link: {
+          label: "Download Excel best practices",
+          url: "https://mckinsey-my.sharepoint.com/:t:/p/schuyler_karr/IQA_CrV7Bva3R7FsqMNiMEHEAfiLge5NyPwpnncushcPl7c?e=dkaQti",
+        },
+      },
+      {
+        id: "excel-1c",
+        title: "Download the Excel style guide",
+        body: "Save the style guide into the same project folder. Cursor will ingest both files together so colors, number formats, fonts, and layout match McKinsey standards.",
+        link: {
+          label: "Download Excel style guide",
+          url: "https://mckinsey-my.sharepoint.com/:t:/p/schuyler_karr/IQDvo93u4035QIngVvmbZqRNAeozOP69U-oSV8ftIWOySFc?e=0AwybG",
+        },
+        tip: "Before you ask Cursor to build anything, tell it: 'Read the Excel best practices and style guide files in this folder and follow them for everything you build.'",
+      },
+      {
         id: "excel-2",
         title: "Create the file",
         body: "File → New File → `build_model.py`. Save it in your project folder.",
