@@ -31,9 +31,10 @@ const main = [
 
 const learn = [
   { title: "1. Install", slug: "install" as const, icon: Download },
-  { title: "2. Cursor basics", slug: "basics" as const, icon: Lightbulb },
-  { title: "3. PPT slides", slug: "pptx" as const, icon: Presentation },
-  { title: "4. Excel models", slug: "excel" as const, icon: Table },
+  { title: "2. In-depth walkthrough", slug: "deep-dive" as const, icon: BookOpen },
+  { title: "3. Cursor basics", slug: "basics" as const, icon: Lightbulb },
+  { title: "4. PPT slides", slug: "pptx" as const, icon: Presentation },
+  { title: "5. Excel models", slug: "excel" as const, icon: Table },
 ];
 
 export function AppSidebar() {
