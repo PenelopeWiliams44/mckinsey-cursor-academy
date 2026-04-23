@@ -8,9 +8,6 @@
 export const links = {
   // Slack — the channel or workspace to send people to for help
   slackHelpChannel: "https://mckinsey.enterprise.slack.com/archives/C0AMKHJR64T",
-  
-  slackWorkspace: "", // e.g. "https://mckinsey.enterprise.slack.com"
-
   // Cursor
   cursorDownload: "https://cursor.com/download",
   cursorDocs: "https://docs.cursor.com",
