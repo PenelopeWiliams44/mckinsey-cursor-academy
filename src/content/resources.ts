@@ -24,7 +24,7 @@ export const resources: Resource[] = [
     id: "slide-workspace",
     title: "McKinsey slide workspace (ZIP)",
     description:
-      "Download this workspace, open the folder in Cursor, and ask Cursor to create a presentation (Claude Opus recommended). First open auto-installs the required Python packages — if not, Cursor will guide setup. Setup may take a minute and trigger a Windows security prompt for Python and Chromium. Make sure Python is installed first — just ask Cursor to install Python for you.",
+      "Download the ZIP, unzip it, and put the unzipped folder on your Desktop. Then open the folder in Cursor and ask Cursor to create a presentation (Claude Opus recommended). First open auto-installs the required Python packages — if not, Cursor will guide setup. Make sure Python is installed first — just ask Cursor to install Python for you.",
     url: "https://mckinsey-my.sharepoint.com/:u:/p/kustaa_yli-ayho/IQBQCt-aHxpwR6EUZHjJHD5yAc3IpGoyIClk2qVNes2hH64?e=KauFmt",
     category: "Template",
     tags: ["pptx", "template", "mckinsey"],
@@ -40,7 +40,7 @@ export const resources: Resource[] = [
   },
   {
     id: "slack-help",
-    title: "#cursor-help on Slack",
+    title: "#agentic-workflows-for-integratives on Slack",
     description: "Ask questions, browse threads, and see what others are working on.",
     url: "https://mckinsey.enterprise.slack.com/archives/C0AMKHJR64T",
     category: "Slack",

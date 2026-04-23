@@ -164,7 +164,7 @@ function HomePage() {
               <MessageSquare className="h-5 w-5 text-[var(--navy)]" />
               <h3 className="font-serif text-xl text-foreground">Ask in Slack</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Open #cursor-help to ask a question or browse recent threads.
+                Open #agentic-workflows-for-integratives to ask a question or browse recent threads.
               </p>
               <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-[var(--navy)]">
                 Open in Slack <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />

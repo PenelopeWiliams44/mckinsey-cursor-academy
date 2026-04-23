@@ -4,6 +4,7 @@ export type TutorialStep = {
   body: string;
   prompt?: string;
   tip?: string;
+  link?: { label: string; url: string };
 };
 
 export type Tutorial = {
@@ -26,13 +27,17 @@ export const tutorials: Tutorial[] = [
       {
         id: "install-1",
         title: "Download Cursor from the McKinsey app catalog",
-        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey ServiceNow app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nLink: https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
+        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey GHD app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nReminder: Cursor requires a charge code and is paid software.",
+        link: {
+          label: "Open Cursor in GHD",
+          url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
+        },
         tip: "If the install button is greyed out, follow the on-screen request flow — approval is usually instant.",
       },
       {
         id: "install-2",
         title: "Open Cursor",
-        body: "Once ServiceNow finishes installing, find Cursor in your Start menu (Windows) or Applications folder (Mac) and open it.",
+        body: "Manage installation and log in with your McKinsey email as you would with any other GHD software.",
       },
       {
         id: "install-3",
@@ -111,12 +116,16 @@ export const tutorials: Tutorial[] = [
       {
         id: "pptx-2",
         title: "Download the McKinsey slide workspace",
-        body: "Download the official slide workspace ZIP from SharePoint and unzip it somewhere easy to find (e.g. your Desktop).\n\nLink: https://mckinsey-my.sharepoint.com/:u:/p/kustaa_yli-ayho/IQBQCt-aHxpwR6EUZHjJHD5yAc3IpGoyIClk2qVNes2hH64?e=KauFmt",
+        body: "Download the official slide workspace ZIP from SharePoint, then unzip it and put the unzipped folder on your Desktop so it's easy to find.",
+        link: {
+          label: "Download slide workspace (ZIP)",
+          url: "https://mckinsey-my.sharepoint.com/:u:/p/kustaa_yli-ayho/IQBQCt-aHxpwR6EUZHjJHD5yAc3IpGoyIClk2qVNes2hH64?e=KauFmt",
+        },
       },
       {
         id: "pptx-3",
         title: "Open the workspace folder in Cursor",
-        body: "In Cursor: File → Open Folder → select the unzipped workspace folder.\n\nOn first open, the workspace will automatically install the Python packages it needs (and Chromium for rendering). This may take a minute and may trigger a Windows security prompt — click Allow. If auto-install doesn't trigger, just ask Cursor in chat: 'Please run the setup for this workspace.'",
+        body: "In Cursor: File → Open Folder → select the unzipped workspace folder.\n\nOn first open, the workspace will automatically install the Python packages it needs (and Chromium for rendering). This may take a minute. If auto-install doesn't trigger, just ask Cursor in chat: 'Please run the setup for this workspace.'",
       },
       {
         id: "pptx-4",

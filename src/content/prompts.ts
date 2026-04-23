@@ -13,22 +13,18 @@ export const prompts: Prompt[] = [
     id: "p1",
     category: "Slides",
     title: "Generate a McKinsey-style deck",
-    description: "Full 6-slide deck with navy/gold theme on any topic.",
-    body: `Write a Python script using python-pptx that creates a 6-slide McKinsey-style PowerPoint deck on [TOPIC].
+    description:
+      "Use the McKinsey slide workspace from the Resources page, then prompt Cursor to build the deck using those files.",
+    body: `I have the McKinsey slide workspace open in Cursor (downloaded from the Resources page of this site). Please use the files in this workspace to create a McKinsey-style presentation on [TOPIC].
 
-Requirements:
-- 16:9 widescreen
-- Navy header bar (#051C2C) with white title text on every slide
-- Gold accent rule (#B89D5E) under each section heading
-- Arial font, 24pt body, 32pt headers
-- Slide 1: title + today's date
-- Slide 2: executive summary (3 bullets)
-- Slide 3: situation (2 columns)
-- Slide 4: 2x2 matrix
-- Slide 5: bar chart with sample data
-- Slide 6: numbered recommendations
+Audience: [e.g. CFO of a Fortune 500 retailer]
+Length: [e.g. 6 slides]
+Key messages I want to land:
+1. [message 1]
+2. [message 2]
+3. [message 3]
 
-Save as 'deck.pptx'.`,
+Use the workspace's templates, styles, and helper scripts — don't invent your own formatting. Include an executive summary, a situation slide, supporting analysis (charts welcome), and a recommended actions slide.`,
   },
   {
     id: "p2",
