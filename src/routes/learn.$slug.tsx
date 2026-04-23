@@ -105,9 +105,19 @@ function TutorialPage() {
                     Done
                   </label>
                 </div>
-                <p className="text-[15px] leading-relaxed text-foreground/85">
+                <p className="whitespace-pre-line text-[15px] leading-relaxed text-foreground/85">
                   {step.body}
                 </p>
+                {step.link && (
+                  <a
+                    href={step.link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 border border-[var(--navy)] bg-[var(--navy)] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[var(--navy-foreground)] hover:bg-[var(--navy)]/90"
+                  >
+                    {step.link.label} ↗
+                  </a>
+                )}
                 {step.prompt && <CopyPrompt text={step.prompt} />}
                 {step.tip && (
                   <div className="mt-4 flex gap-3 border-l-2 border-[var(--gold)] bg-[var(--cream)] px-4 py-3 text-sm text-foreground/80">
@@ -130,8 +140,8 @@ function TutorialPage() {
         <div className="flex-1">
           <h4 className="font-serif text-lg text-foreground">Stuck on a step?</h4>
           <p className="mt-1 text-sm text-muted-foreground">
-            Drop your question in <span className="font-semibold text-foreground">#cursor-help</span>.
-            Someone will reply within an hour during work hours.
+            Drop your question in{" "}
+            <span className="font-semibold text-foreground">#agentic-workflows-for-integratives</span>.
           </p>
         </div>
         {links.slackHelpChannel ? (
