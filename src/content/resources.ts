@@ -1,4 +1,4 @@
-export type ResourceCategory = "Docs" | "Video" | "Template" | "Slack";
+export type ResourceCategory = "Video" | "Template" | "Skills" | "Slack";
 
 export type Resource = {
   id: string;
@@ -9,86 +9,41 @@ export type Resource = {
   tags: string[];
 };
 
-// Seed entries — edit these or add real links from your team
+// Curated resources for McKinsey consultants getting started with Cursor.
 export const resources: Resource[] = [
   {
-    id: "r1",
-    title: "Cursor — official docs",
-    description: "The complete reference for chat, composer, ⌘K, and keyboard shortcuts.",
-    url: "https://docs.cursor.com",
-    category: "Docs",
-    tags: ["beginner", "reference"],
-  },
-  {
-    id: "r2",
-    title: "python-pptx documentation",
-    description: "Every method for building PowerPoint slides programmatically.",
-    url: "https://python-pptx.readthedocs.io",
-    category: "Docs",
-    tags: ["pptx", "python"],
-  },
-  {
-    id: "r3",
-    title: "openpyxl documentation",
-    description: "Read and write Excel 2010+ files with full formula and formatting support.",
-    url: "https://openpyxl.readthedocs.io",
-    category: "Docs",
-    tags: ["excel", "python"],
-  },
-  {
-    id: "r4",
-    title: "Cursor in 100 seconds",
-    description: "Quick visual walkthrough of the core Cursor features.",
-    url: "https://www.youtube.com/results?search_query=cursor+ai+in+100+seconds",
+    id: "cursor-intro-video",
+    title: "Cursor intro video (Rewiring the Firm)",
+    description:
+      "Short McKinsey-produced walkthrough of what Cursor is and how to use it. Watch this first.",
+    url: "https://rewiring-the-firm.apps.mckinsey.com/videos/cursor-intro.mp4",
     category: "Video",
-    tags: ["beginner", "video"],
+    tags: ["beginner", "video", "mckinsey"],
   },
   {
-    id: "r5",
-    title: "Building decks with python-pptx — tutorial",
-    description: "Step-by-step video showing the full workflow.",
-    url: "https://www.youtube.com/results?search_query=python-pptx+tutorial",
-    category: "Video",
-    tags: ["pptx"],
-  },
-  {
-    id: "r6",
-    title: "McKinsey deck template (PPTX)",
-    description: "Starter file with navy/gold theme and standard layouts. Replace with your team's official template.",
-    url: "#",
+    id: "slide-workspace",
+    title: "McKinsey slide workspace (ZIP)",
+    description:
+      "Download this workspace, open the folder in Cursor, and ask Cursor to create a presentation (Claude Opus recommended). First open auto-installs the required Python packages — if not, Cursor will guide setup. Setup may take a minute and trigger a Windows security prompt for Python and Chromium. Make sure Python is installed first — just ask Cursor to install Python for you.",
+    url: "https://mckinsey-my.sharepoint.com/:u:/p/kustaa_yli-ayho/IQBQCt-aHxpwR6EUZHjJHD5yAc3IpGoyIClk2qVNes2hH64?e=KauFmt",
     category: "Template",
-    tags: ["pptx", "template"],
+    tags: ["pptx", "template", "mckinsey"],
   },
   {
-    id: "r7",
-    title: "5-year financial model template (XLSX)",
-    description: "Starter Excel model with assumptions, P&L, and sensitivity sheets.",
-    url: "#",
-    category: "Template",
-    tags: ["excel", "template"],
+    id: "intelligence-skills",
+    title: "McKinsey Intelligence — Skill Explorer",
+    description:
+      "Once you're up and running on Cursor, browse Intelligence skills you can plug into your workflow.",
+    url: "https://skill-explorer.npn.apps.mckinsey.com/",
+    category: "Skills",
+    tags: ["mckinsey", "advanced", "intelligence"],
   },
   {
-    id: "r8",
-    title: "#cursor-help — getting started thread",
-    description: "Pinned welcome thread with FAQs from new users.",
-    url: "#",
+    id: "slack-help",
+    title: "#cursor-help on Slack",
+    description: "Ask questions, browse threads, and see what others are working on.",
+    url: "https://mckinsey.enterprise.slack.com/archives/C0AMKHJR64T",
     category: "Slack",
-    tags: ["slack", "beginner"],
-  },
-  {
-    id: "r9",
-    title: "#cursor-wins — share your output",
-    description: "Channel for posting decks and models you've built. Browse for inspiration.",
-    url: "#",
-    category: "Slack",
-    tags: ["slack", "inspiration"],
-  },
-  {
-    id: "r10",
-    title: "Python install troubleshooting",
-    description: "Common errors when installing Python on a McKinsey laptop, and how to fix them.",
-    url: "#",
-    category: "Slack",
-    tags: ["slack", "python", "troubleshooting"],
+    tags: ["slack", "support"],
   },
 ];

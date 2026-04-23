@@ -20,7 +20,7 @@ export const Route = createFileRoute("/resources")({
   component: ResourcesPage,
 });
 
-const categories: ("All" | ResourceCategory)[] = ["All", "Docs", "Video", "Template", "Slack"];
+const categories: ("All" | ResourceCategory)[] = ["All", "Video", "Template", "Skills", "Slack"];
 
 function ResourcesPage() {
   const [query, setQuery] = useState("");
