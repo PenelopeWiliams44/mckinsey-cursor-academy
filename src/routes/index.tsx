@@ -3,6 +3,8 @@ import { ArrowRight, Download, Lightbulb, Presentation, Table, MessageSquare, Sp
 import { tutorials } from "@/content/tutorials";
 import { links } from "@/content/links";
 
+// links is used inside HomePage below
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
