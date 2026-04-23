@@ -60,21 +60,39 @@ export const tutorials: Tutorial[] = [
       },
       {
         id: "install-5",
-        title: "Ask Cursor to install Python for you",
-        body: "Paste the prompt below into the chat. Cursor will detect your OS, give you the exact commands, and offer to run them for you in the built-in terminal. Just click 'Run' on each step it suggests.",
+        title: "Ask Cursor to install Python for you (skip if you used Option B)",
+        body: "If you installed the Cursor + Python + GitHub bundle in Option B, Python is already on your machine — skip this step.\n\nOtherwise, paste the prompt below into the chat. Cursor will detect your OS, give you the exact commands, and offer to run them for you in the built-in terminal. Just click 'Run' on each step it suggests.",
         prompt:
           "I'm on [Mac / Windows — pick one]. I have never used Python before. Please install Python 3.11 and pip on my machine using the simplest possible approach, run each step in the built-in terminal, and verify the install at the end.",
       },
       {
         id: "install-6",
-        title: "You're done",
-        body: "When Cursor confirms `python --version` returns 3.11.x, you're ready to move on to Step 02: Cursor Basics. 🎉",
+        title: "You're done (skip if you used Option B)",
+        body: "When Cursor confirms `python --version` returns 3.11.x, you're ready to move on. If you used the Option B bundle, you can skip straight ahead. 🎉",
+      },
+    ],
+  },
+  {
+    slug: "deep-dive",
+    number: "02",
+    title: "In-depth Cursor walkthrough",
+    subtitle: "A guided click-through tutorial from the Rewiring the Firm team. Best done right after install.",
+    duration: "20 min",
+    steps: [
+      {
+        id: "deep-dive-1",
+        title: "Open the in-depth tutorial",
+        body: "The McKinsey Rewiring the Firm team built a click-through tutorial that walks you through Cursor end-to-end with screenshots and short demos. Open it in a new tab and work through it at your own pace before moving on to the basics track.",
+        link: {
+          label: "Open in-depth tutorial",
+          url: "https://rewiring-the-firm.apps.mckinsey.com/#tab=tutorial",
+        },
       },
     ],
   },
   {
     slug: "basics",
-    number: "02",
+    number: "03",
     title: "Cursor Basics",
     subtitle: "The 4 things you'll use 95% of the time. Learn these and you're productive.",
     duration: "8 min",
