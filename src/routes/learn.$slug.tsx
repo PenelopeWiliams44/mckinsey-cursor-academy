@@ -124,7 +124,21 @@ function TutorialPage() {
                     <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" />
                     <p>
                       <span className="font-semibold">Tip · </span>
-                      {step.tip}
+                      {step.tip.split(/(https?:\/\/[^\s]+)/g).map((part, j) =>
+                        /^https?:\/\//.test(part) ? (
+                          <a
+                            key={j}
+                            href={part}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[var(--navy)] underline underline-offset-2 hover:text-[var(--gold)] break-all"
+                          >
+                            {part}
+                          </a>
+                        ) : (
+                          <span key={j}>{part}</span>
+                        ),
+                      )}
                     </p>
                   </div>
                 )}
