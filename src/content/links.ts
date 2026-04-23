@@ -9,7 +9,7 @@ export const links = {
   // Slack — the channel or workspace to send people to for help
   slackHelpChannel: "https://mckinsey.enterprise.slack.com/archives/C0AMKHJR64T",
   // Cursor
-  cursorDownload: "https://cursor.com/download",
+  cursorDownload: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
   cursorDocs: "https://docs.cursor.com",
 
   // Python
