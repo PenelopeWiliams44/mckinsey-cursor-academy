@@ -8,7 +8,7 @@ export type TutorialStep = {
 };
 
 export type Tutorial = {
-  slug: "install" | "basics" | "pptx" | "excel";
+  slug: "install" | "deep-dive" | "basics" | "pptx" | "excel";
   number: string;
   title: string;
   subtitle: string;
@@ -25,13 +25,23 @@ export const tutorials: Tutorial[] = [
     duration: "10 min",
     steps: [
       {
-        id: "install-1",
-        title: "Download Cursor from the McKinsey app catalog",
-        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey GHD app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nReminder: Cursor requires a charge code and is paid software.",
+        id: "install-1a",
+        title: "Option A — Download Cursor on its own",
+        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey GHD app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nReminder: Cursor requires a charge code and is paid software.\n\nIf you choose this option, continue with every step below.",
         link: {
           label: "Open Cursor in GHD",
           url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
         },
+      },
+      {
+        id: "install-1b",
+        title: "Option B — Download the Cursor + Python + GitHub bundle (recommended)",
+        body: "If you'd rather get Cursor, Python, and GitHub installed together in one go, request the bundled package from GHD instead. Then follow the official McKinsey install & setup guide — it walks you through the whole thing.\n\nIf you choose this option, you can skip Steps 5 and 6 below (Python is already installed).\n\nReminder: Cursor requires a charge code and is paid software.",
+        link: {
+          label: "Open bundle in GHD",
+          url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=d0177727ddc77ad0cfb9f5af25663c58&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=Filter%20apps",
+        },
+        tip: "After installing the bundle, follow the Rewiring the Firm install & setup walkthrough: https://rewiring-the-firm.apps.mckinsey.com/#tab=setup",
       },
       {
         id: "install-2",
@@ -50,21 +60,39 @@ export const tutorials: Tutorial[] = [
       },
       {
         id: "install-5",
-        title: "Ask Cursor to install Python for you",
-        body: "Paste the prompt below into the chat. Cursor will detect your OS, give you the exact commands, and offer to run them for you in the built-in terminal. Just click 'Run' on each step it suggests.",
+        title: "Ask Cursor to install Python for you (skip if you used Option B)",
+        body: "If you installed the Cursor + Python + GitHub bundle in Option B, Python is already on your machine — skip this step.\n\nOtherwise, paste the prompt below into the chat. Cursor will detect your OS, give you the exact commands, and offer to run them for you in the built-in terminal. Just click 'Run' on each step it suggests.",
         prompt:
           "I'm on [Mac / Windows — pick one]. I have never used Python before. Please install Python 3.11 and pip on my machine using the simplest possible approach, run each step in the built-in terminal, and verify the install at the end.",
       },
       {
         id: "install-6",
-        title: "You're done",
-        body: "When Cursor confirms `python --version` returns 3.11.x, you're ready to move on to Step 02: Cursor Basics. 🎉",
+        title: "You're done (skip if you used Option B)",
+        body: "When Cursor confirms `python --version` returns 3.11.x, you're ready to move on. If you used the Option B bundle, you can skip straight ahead. 🎉",
+      },
+    ],
+  },
+  {
+    slug: "deep-dive",
+    number: "02",
+    title: "In-depth Cursor walkthrough",
+    subtitle: "A guided click-through tutorial from the Rewiring the Firm team. Best done right after install.",
+    duration: "20 min",
+    steps: [
+      {
+        id: "deep-dive-1",
+        title: "Open the in-depth tutorial",
+        body: "The McKinsey Rewiring the Firm team built a click-through tutorial that walks you through Cursor end-to-end with screenshots and short demos. Open it in a new tab and work through it at your own pace before moving on to the basics track.",
+        link: {
+          label: "Open in-depth tutorial",
+          url: "https://rewiring-the-firm.apps.mckinsey.com/#tab=tutorial",
+        },
       },
     ],
   },
   {
     slug: "basics",
-    number: "02",
+    number: "03",
     title: "Cursor Basics",
     subtitle: "The 4 things you'll use 95% of the time. Learn these and you're productive.",
     duration: "8 min",
@@ -101,7 +129,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     slug: "pptx",
-    number: "03",
+    number: "04",
     title: "Generate McKinsey-style PPT slides",
     subtitle: "Use the McKinsey slide workspace + Cursor to produce on-brand decks in minutes.",
     duration: "10 min",
@@ -147,7 +175,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     slug: "excel",
-    number: "04",
+    number: "05",
     title: "Build Excel models with Cursor",
     subtitle: "Use openpyxl to generate spreadsheets with formulas, formatting, and charts.",
     duration: "12 min",
