@@ -102,7 +102,7 @@ export function AppSidebar() {
           Built for total beginners.
           <br />
           Stuck? Ping{" "}
-          <span className="text-[var(--gold)]">#cursor-help</span>.
+          <span className="text-[var(--gold)]">#agentic-workflows-for-integratives</span>.
         </p>
       </SidebarFooter>
     </Sidebar>

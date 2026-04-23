@@ -32,7 +32,6 @@ export const tutorials: Tutorial[] = [
           label: "Open Cursor in GHD",
           url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
         },
-        tip: "If the install button is greyed out, follow the on-screen request flow — approval is usually instant.",
       },
       {
         id: "install-2",
@@ -42,7 +41,7 @@ export const tutorials: Tutorial[] = [
       {
         id: "install-3",
         title: "Sign in",
-        body: "When Cursor opens, click 'Sign in' and use your personal Google account (not your @mckinsey.com — that won't work for the free tier). You'll get 2 weeks of Pro free.",
+        body: "When Cursor opens, click 'Sign in' and use your @mckinsey.com email.",
       },
       {
         id: "install-4",
