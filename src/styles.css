@@ -129,14 +129,16 @@
   }
 }
 
-@utility gold-rule {
-  position: relative;
-}
-@utility gold-rule::after {
-  content: "";
-  display: block;
-  width: 2.5rem;
-  height: 2px;
-  background: var(--gold);
-  margin-top: 0.75rem;
+@layer components {
+  .gold-rule {
+    position: relative;
+  }
+  .gold-rule::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 0.75rem;
+  }
 }
