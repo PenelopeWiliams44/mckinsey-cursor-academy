@@ -3,7 +3,6 @@ import {
   BookOpen,
   Home,
   Library,
-  MessageSquare,
   Sparkles,
   Download,
   Lightbulb,
@@ -24,11 +23,10 @@ import {
 } from "@/components/ui/sidebar";
 
 const main = [
-  { title: "Home", url: "/", icon: Home },
-  { title: "Tutorials", url: "/learn", icon: BookOpen },
-  { title: "Resources", url: "/resources", icon: Library },
-  { title: "Prompt library", url: "/prompts", icon: Sparkles },
-  { title: "Slack feed", url: "/slack", icon: MessageSquare },
+  { title: "Home", url: "/" as const, icon: Home },
+  { title: "Tutorials", url: "/learn" as const, icon: BookOpen },
+  { title: "Resources", url: "/resources" as const, icon: Library },
+  { title: "Prompt library", url: "/prompts" as const, icon: Sparkles },
 ];
 
 const learn = [
