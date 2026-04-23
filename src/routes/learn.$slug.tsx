@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { CopyPrompt } from "@/components/CopyPrompt";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { links } from "@/content/links";
 
 export const Route = createFileRoute("/learn/$slug")({
   loader: ({ params }) => {

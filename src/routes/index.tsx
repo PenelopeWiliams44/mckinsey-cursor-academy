@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Lightbulb, Presentation, Table, MessageSquare, Sparkles, Library } from "lucide-react";
 import { tutorials } from "@/content/tutorials";
+import { links } from "@/content/links";
 
 export const Route = createFileRoute("/")({
   head: () => ({
