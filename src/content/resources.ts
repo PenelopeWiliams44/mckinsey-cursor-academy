@@ -30,6 +30,24 @@ export const resources: Resource[] = [
     tags: ["pptx", "template", "mckinsey"],
   },
   {
+    id: "excel-best-practices",
+    title: "Excel best practices (for Cursor to ingest)",
+    description:
+      "Download this file and drop it into your Cursor workspace, then tell Cursor to read it before building any Excel model. It encodes McKinsey conventions for structure, formulas, and formatting.",
+    url: "https://mckinsey-my.sharepoint.com/:t:/p/schuyler_karr/IQA_CrV7Bva3R7FsqMNiMEHEAfiLge5NyPwpnncushcPl7c?e=dkaQti",
+    category: "Template",
+    tags: ["excel", "best-practices", "mckinsey"],
+  },
+  {
+    id: "excel-style-guide",
+    title: "Excel style guide (for Cursor to ingest)",
+    description:
+      "Companion style guide — colors, number formats, fonts, and layout rules. Add it to the same workspace as the best-practices file so Cursor references both.",
+    url: "https://mckinsey-my.sharepoint.com/:t:/p/schuyler_karr/IQDvo93u4035QIngVvmbZqRNAeozOP69U-oSV8ftIWOySFc?e=0AwybG",
+    category: "Template",
+    tags: ["excel", "style-guide", "mckinsey"],
+  },
+  {
     id: "intelligence-skills",
     title: "McKinsey Intelligence — Skill Explorer",
     description:
