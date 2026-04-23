@@ -7,7 +7,7 @@
 
 export const links = {
   // Slack — the channel or workspace to send people to for help
-  slackHelpChannel: "", // e.g. "https://mckinsey.enterprise.slack.com/archives/C0123456"
+  slackHelpChannel: "https://mckinsey.enterprise.slack.com/archives/C0AMKHJR64T",
   slackWinsChannel: "",
   slackWorkspace: "", // e.g. "https://mckinsey.enterprise.slack.com"
 
