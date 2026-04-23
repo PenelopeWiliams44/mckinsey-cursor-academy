@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Lightbulb, Presentation, Table, MessageSquare, Sparkles, Library } from "lucide-react";
 import { tutorials } from "@/content/tutorials";
+import { links } from "@/content/links";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -123,39 +124,62 @@ function HomePage() {
       {/* Secondary nav cards */}
       <section className="border-t border-border bg-[var(--cream)]">
         <div className="mx-auto grid max-w-6xl gap-px bg-border md:grid-cols-3">
-          {[
-            {
-              to: "/resources" as const,
-              icon: Library,
-              title: "Resource library",
-              body: "Curated docs, videos, templates, and Slack threads.",
-            },
-            {
-              to: "/prompts" as const,
-              icon: Sparkles,
-              title: "Prompt library",
-              body: "Copy-paste prompts for slides, models, and debugging.",
-            },
-            {
-              to: "/slack" as const,
-              icon: MessageSquare,
-              title: "Live Slack feed",
-              body: "See the latest messages from #cursor-help and #cursor-wins.",
-            },
-          ].map((card) => (
-            <Link
-              key={card.to}
-              to={card.to}
+          <Link
+            to="/resources"
+            className="group flex flex-col gap-3 bg-[var(--cream)] p-8 transition-colors hover:bg-white"
+          >
+            <Library className="h-5 w-5 text-[var(--navy)]" />
+            <h3 className="font-serif text-xl text-foreground">Resource library</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Curated docs, videos, templates, and helpful links.
+            </p>
+            <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-[var(--navy)]">
+              Open <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+
+          <Link
+            to="/prompts"
+            className="group flex flex-col gap-3 bg-[var(--cream)] p-8 transition-colors hover:bg-white"
+          >
+            <Sparkles className="h-5 w-5 text-[var(--navy)]" />
+            <h3 className="font-serif text-xl text-foreground">Prompt library</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Copy-paste prompts for slides, models, and debugging.
+            </p>
+            <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-[var(--navy)]">
+              Open <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+
+          {links.slackHelpChannel ? (
+            <a
+              href={links.slackHelpChannel}
+              target="_blank"
+              rel="noreferrer"
               className="group flex flex-col gap-3 bg-[var(--cream)] p-8 transition-colors hover:bg-white"
             >
-              <card.icon className="h-5 w-5 text-[var(--navy)]" />
-              <h3 className="font-serif text-xl text-foreground">{card.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{card.body}</p>
+              <MessageSquare className="h-5 w-5 text-[var(--navy)]" />
+              <h3 className="font-serif text-xl text-foreground">Ask in Slack</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Open #cursor-help to ask a question or browse recent threads.
+              </p>
               <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-[var(--navy)]">
-                Open <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                Open in Slack <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
               </span>
-            </Link>
-          ))}
+            </a>
+          ) : (
+            <div className="flex flex-col gap-3 bg-[var(--cream)] p-8 opacity-70">
+              <MessageSquare className="h-5 w-5 text-[var(--navy)]" />
+              <h3 className="font-serif text-xl text-foreground">Ask in Slack</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Slack channel link not configured yet.
+              </p>
+              <span className="mt-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                Add it in src/content/links.ts
+              </span>
+            </div>
+          )}
         </div>
       </section>
 

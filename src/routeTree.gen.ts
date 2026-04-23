@@ -9,18 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SlackRouteImport } from './routes/slack'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as PromptsRouteImport } from './routes/prompts'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LearnIndexRouteImport } from './routes/learn.index'
 import { Route as LearnSlugRouteImport } from './routes/learn.$slug'
 
-const SlackRoute = SlackRouteImport.update({
-  id: '/slack',
-  path: '/slack',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
@@ -51,7 +45,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/prompts': typeof PromptsRoute
   '/resources': typeof ResourcesRoute
-  '/slack': typeof SlackRoute
   '/learn/$slug': typeof LearnSlugRoute
   '/learn/': typeof LearnIndexRoute
 }
@@ -59,7 +52,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/prompts': typeof PromptsRoute
   '/resources': typeof ResourcesRoute
-  '/slack': typeof SlackRoute
   '/learn/$slug': typeof LearnSlugRoute
   '/learn': typeof LearnIndexRoute
 }
@@ -68,49 +60,27 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/prompts': typeof PromptsRoute
   '/resources': typeof ResourcesRoute
-  '/slack': typeof SlackRoute
   '/learn/$slug': typeof LearnSlugRoute
   '/learn/': typeof LearnIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/prompts'
-    | '/resources'
-    | '/slack'
-    | '/learn/$slug'
-    | '/learn/'
+  fullPaths: '/' | '/prompts' | '/resources' | '/learn/$slug' | '/learn/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/prompts' | '/resources' | '/slack' | '/learn/$slug' | '/learn'
-  id:
-    | '__root__'
-    | '/'
-    | '/prompts'
-    | '/resources'
-    | '/slack'
-    | '/learn/$slug'
-    | '/learn/'
+  to: '/' | '/prompts' | '/resources' | '/learn/$slug' | '/learn'
+  id: '__root__' | '/' | '/prompts' | '/resources' | '/learn/$slug' | '/learn/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PromptsRoute: typeof PromptsRoute
   ResourcesRoute: typeof ResourcesRoute
-  SlackRoute: typeof SlackRoute
   LearnSlugRoute: typeof LearnSlugRoute
   LearnIndexRoute: typeof LearnIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/slack': {
-      id: '/slack'
-      path: '/slack'
-      fullPath: '/slack'
-      preLoaderRoute: typeof SlackRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/resources': {
       id: '/resources'
       path: '/resources'
@@ -153,7 +123,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PromptsRoute: PromptsRoute,
   ResourcesRoute: ResourcesRoute,
-  SlackRoute: SlackRoute,
   LearnSlugRoute: LearnSlugRoute,
   LearnIndexRoute: LearnIndexRoute,
 }

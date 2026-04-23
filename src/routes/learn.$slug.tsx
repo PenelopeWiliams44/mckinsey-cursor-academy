@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { CopyPrompt } from "@/components/CopyPrompt";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { links } from "@/content/links";
 
 export const Route = createFileRoute("/learn/$slug")({
   loader: ({ params }) => {
@@ -133,12 +134,20 @@ function TutorialPage() {
             Someone will reply within an hour during work hours.
           </p>
         </div>
-        <Link
-          to="/slack"
-          className="shrink-0 self-center bg-[var(--navy)] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[var(--navy-foreground)] hover:bg-[var(--navy)]/90"
-        >
-          Open Slack
-        </Link>
+        {links.slackHelpChannel ? (
+          <a
+            href={links.slackHelpChannel}
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 self-center bg-[var(--navy)] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[var(--navy-foreground)] hover:bg-[var(--navy)]/90"
+          >
+            Open Slack
+          </a>
+        ) : (
+          <span className="shrink-0 self-center border border-border bg-[var(--cream)] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Slack link not set
+          </span>
+        )}
       </div>
 
       {/* Prev / Next */}
