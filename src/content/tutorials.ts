@@ -129,7 +129,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     slug: "pptx",
-    number: "03",
+    number: "04",
     title: "Generate McKinsey-style PPT slides",
     subtitle: "Use the McKinsey slide workspace + Cursor to produce on-brand decks in minutes.",
     duration: "10 min",
@@ -175,7 +175,7 @@ export const tutorials: Tutorial[] = [
   },
   {
     slug: "excel",
-    number: "04",
+    number: "05",
     title: "Build Excel models with Cursor",
     subtitle: "Use openpyxl to generate spreadsheets with formulas, formatting, and charts.",
     duration: "12 min",
