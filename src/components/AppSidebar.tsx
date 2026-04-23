@@ -32,10 +32,10 @@ const main = [
 ];
 
 const learn = [
-  { title: "1. Install", url: "/learn/install", icon: Download },
-  { title: "2. Cursor basics", url: "/learn/basics", icon: Lightbulb },
-  { title: "3. PPT slides", url: "/learn/pptx", icon: Presentation },
-  { title: "4. Excel models", url: "/learn/excel", icon: Table },
+  { title: "1. Install", slug: "install" as const, icon: Download },
+  { title: "2. Cursor basics", slug: "basics" as const, icon: Lightbulb },
+  { title: "3. PPT slides", slug: "pptx" as const, icon: Presentation },
+  { title: "4. Excel models", slug: "excel" as const, icon: Table },
 ];
 
 export function AppSidebar() {
@@ -85,9 +85,9 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {learn.map((item) => (
-                <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    <Link to={item.url}>
+                <SidebarMenuItem key={item.slug}>
+                  <SidebarMenuButton asChild isActive={pathname === `/learn/${item.slug}`}>
+                    <Link to="/learn/$slug" params={{ slug: item.slug }}>
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
