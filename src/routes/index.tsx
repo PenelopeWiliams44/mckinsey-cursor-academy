@@ -52,7 +52,8 @@ function HomePage() {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
-              to="/learn/install"
+              to="/learn/$slug"
+              params={{ slug: "install" }}
               className="group inline-flex items-center gap-2 bg-[var(--gold)] px-6 py-3 text-sm font-semibold text-[var(--gold-foreground)] transition-all hover:bg-[var(--gold)]/90"
             >
               Start with Step 01: Install
