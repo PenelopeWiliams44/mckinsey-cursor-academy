@@ -25,14 +25,14 @@ export const tutorials: Tutorial[] = [
     steps: [
       {
         id: "install-1",
-        title: "Download Cursor",
-        body: "Go to cursor.com and click the big 'Download' button. It will detect whether you're on Mac or Windows automatically. Save the installer to your Downloads folder.",
-        tip: "If you're on a McKinsey laptop and the download is blocked, request it through the IT software portal — it's pre-approved.",
+        title: "Download Cursor from the McKinsey app catalog",
+        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey ServiceNow app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nLink: https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
+        tip: "If the install button is greyed out, follow the on-screen request flow — approval is usually instant.",
       },
       {
         id: "install-2",
-        title: "Install Cursor",
-        body: "On Mac: open the .dmg file and drag the Cursor icon into your Applications folder. On Windows: double-click the installer and click 'Next' through every screen. Then open Cursor.",
+        title: "Open Cursor",
+        body: "Once ServiceNow finishes installing, find Cursor in your Start menu (Windows) or Applications folder (Mac) and open it.",
       },
       {
         id: "install-3",
@@ -41,20 +41,20 @@ export const tutorials: Tutorial[] = [
       },
       {
         id: "install-4",
-        title: "Open the built-in terminal",
-        body: "Inside Cursor, press Ctrl+` (the key above Tab) on Windows, or ⌘+` on Mac. A terminal window opens at the bottom. This is where we'll install Python.",
+        title: "Open the built-in chat",
+        body: "Press ⌘+L (Mac) or Ctrl+L (Windows) to open the chat panel on the right. This is your AI assistant — you'll talk to it in plain English.",
       },
       {
         id: "install-5",
         title: "Ask Cursor to install Python for you",
-        body: "Open the chat panel on the right (⌘+L on Mac, Ctrl+L on Windows) and paste the prompt below. Cursor will give you the exact commands to run — click 'Run' on each.",
+        body: "Paste the prompt below into the chat. Cursor will detect your OS, give you the exact commands, and offer to run them for you in the built-in terminal. Just click 'Run' on each step it suggests.",
         prompt:
-          "I'm on [Mac / Windows — pick one]. I have never used Python before. Please give me the simplest possible instructions to install Python 3.11 and pip, and then verify the installation works. Use the built-in terminal.",
+          "I'm on [Mac / Windows — pick one]. I have never used Python before. Please install Python 3.11 and pip on my machine using the simplest possible approach, run each step in the built-in terminal, and verify the install at the end.",
       },
       {
         id: "install-6",
-        title: "Verify it worked",
-        body: "In the terminal, type `python3 --version` (Mac) or `python --version` (Windows) and press Enter. You should see something like 'Python 3.11.x'. If you do — you're done. 🎉",
+        title: "You're done",
+        body: "When Cursor confirms `python --version` returns 3.11.x, you're ready to move on to Step 02: Cursor Basics. 🎉",
       },
     ],
   },
