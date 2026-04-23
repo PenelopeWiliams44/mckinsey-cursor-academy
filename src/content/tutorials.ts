@@ -25,13 +25,23 @@ export const tutorials: Tutorial[] = [
     duration: "10 min",
     steps: [
       {
-        id: "install-1",
-        title: "Download Cursor from the McKinsey app catalog",
-        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey GHD app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nReminder: Cursor requires a charge code and is paid software.",
+        id: "install-1a",
+        title: "Option A — Download Cursor on its own",
+        body: "Cursor is pre-approved for McKinsey laptops. Open the McKinsey GHD app catalog page for Cursor and request/install it from there — do NOT download from cursor.com directly.\n\nReminder: Cursor requires a charge code and is paid software.\n\nIf you choose this option, continue with every step below.",
         link: {
           label: "Open Cursor in GHD",
           url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=1a9b2b55c38c9650cd5777f4e40131c9&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=cursor",
         },
+      },
+      {
+        id: "install-1b",
+        title: "Option B — Download the Cursor + Python + GitHub bundle (recommended)",
+        body: "If you'd rather get Cursor, Python, and GitHub installed together in one go, request the bundled package from GHD instead. Then follow the official McKinsey install & setup guide — it walks you through the whole thing.\n\nIf you choose this option, you can skip Steps 5 and 6 below (Python is already installed).\n\nReminder: Cursor requires a charge code and is paid software.",
+        link: {
+          label: "Open bundle in GHD",
+          url: "https://mckinsey.service-now.com/ghd?id=mck_app_cat_item&sys_id=d0177727ddc77ad0cfb9f5af25663c58&category=Category&status=Status&os=Windows&pricing=Pricing&brand=Brand&filter%20apps=Filter%20apps",
+        },
+        tip: "After installing the bundle, follow the Rewiring the Firm install & setup walkthrough: https://rewiring-the-firm.apps.mckinsey.com/#tab=setup",
       },
       {
         id: "install-2",
