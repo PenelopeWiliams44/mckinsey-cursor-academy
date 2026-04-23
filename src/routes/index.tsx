@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, Lightbulb, Presentation, Table, MessageSquare, Sparkles, Library } from "lucide-react";
+import { ArrowRight, Download, Lightbulb, Presentation, Table, MessageSquare, Sparkles, Library, BookOpen } from "lucide-react";
 import { tutorials } from "@/content/tutorials";
 import { links } from "@/content/links";
 
