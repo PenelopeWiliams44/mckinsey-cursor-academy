@@ -26,6 +26,7 @@ export const Route = createFileRoute("/")({
 
 const trackIcons = {
   install: Download,
+  "deep-dive": BookOpen,
   basics: Lightbulb,
   pptx: Presentation,
   excel: Table,
